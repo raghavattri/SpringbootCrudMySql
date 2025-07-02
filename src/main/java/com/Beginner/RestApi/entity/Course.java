@@ -1,9 +1,14 @@
 package com.Beginner.RestApi.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
-    private long id; // Made private for encapsulation
-    private String name; // Made private for encapsulation
-    private String description; // Made private for encapsulation
+    @Id
+    private long id; // Primary key
+    private String name;
+    private String description;
 
     // Constructor with parameters
     public Course(String description, String name, long id) {
@@ -33,17 +38,17 @@ public class Course {
         return description;
     }
 
-    // Optional: Setter for id (if deserialization is needed)
+    // Setter for id
     public void setId(long id) {
         this.id = id;
     }
 
-    // Optional: Setter for name (if deserialization is needed)
+    // Setter for name
     public void setName(String name) {
         this.name = name;
     }
 
-    // Optional: Setter for description (if deserialization is needed)
+    // Setter for description
     public void setDescription(String description) {
         this.description = description;
     }

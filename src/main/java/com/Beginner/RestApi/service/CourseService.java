@@ -11,4 +11,8 @@ public interface CourseService {
     public  Course getCourseById(long courseId);
 
     public String addCourse(long id,String name,String description);
+
+    public Course updateCourse(long id,String name,String description);
+
+    public String deleteCourse(long id);
 }
